@@ -1,0 +1,111 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+install.packages("ISLR")
+```
+
+```{r}
+library(ISLR)
+```
+```{r}
+datacredit <- Credit
+```
+
+```{r}
+head(datacredit)
+```
+
+#NOMER 1
+#median dan mean
+
+```{r}
+mean(datacredit$Rating)
+```
+```{r}
+mean(datacredit$Cards)
+```
+```{r}
+mean(datacredit$Age)
+```
+```{r}
+median(datacredit$Rating)
+```
+```{r}
+median(datacredit$Cards)
+```
+```{r}
+median(datacredit$Age)
+```
+```{r}
+library(lsr)
+
+```
+#NOMER 2
+#Mode of
+
+```{r}
+modeOf(datacredit$Gender)
+```
+```{r}
+modeOf(datacredit$Student)
+```
+```{r}
+modeOf(datacredit$Married)
+```
+#NOMER 3
+#Quartile 10,37,91
+```{r}
+quantile(x = datacredit$Education, probs = 0.1)
+```
+```{r}
+quantile(x = datacredit$Education, probs = 0.37)
+```
+```{r}
+quantile(x = datacredit$Education, probs = 0.91)
+```
+#nomer 4
+#Boxplot
+```{r}
+boxplot(datacredit$Balance)
+```
+#NOMER 5
+#Korelasi dan Limit
+```{r}
+dataAS <- data.frame(limit = datacredit$Limit, rating = datacredit$Rating)
+dataAS
+```
+```{r}
+AgexCards <- data.frame(age = datacredit$Age, cards = datacredit$Cards)
+AgexCards
+
+```
+```{r}
+
+IncomexEdu <- data.frame(income = datacredit$Income, education = datacredit$Education)
+IncomexEdu
+
+```
+```{r}
+plot(datacredit$Limit, datacredit$Rating)
+
+```
+```{r}
+plot(datacredit$Age, datacredit$Cards)
+
+```
+```{r}
+plot(datacredit$Income, datacredit$Education)
+```
+
+
+#Probabilitas
+
+Disebuah kebun pisang terdapat 200 pohon setiap panen yang busuk 20 buah ,jika diambil acak 4 buah secara acak,tentukan peluang terbaginya 2 buah pisang yang diambil.
+
+```{r}
+dbinom(x = 2, size = 4
+       ,prob =1/10 )
+```
